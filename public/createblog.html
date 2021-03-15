@@ -31,7 +31,7 @@
             <input name="bloggerName" class=" bloggerNameClass form-control form-control-md " type="text " placeholder="Blogger Name">
 
             <label class="preferenceLabel " for=" ">Choose Category for Blog</label>
-            <select name=" bloggerOptionClass catergorySelection" class="form-control form-control-md ">
+            <select name="catergorySelection" class=" bloggerOptionClass form-control form-control-md ">
                 <option>Sports</option>
                 <option>Politics</option>
                 <option>Jokes</option>
@@ -40,6 +40,14 @@
             </select>
             <label class="topicLabel">Heading For Blog</label>
             <input class=" bloggerHeadingClass form-control form-control-md" name="topicName" type="text" placeholder="Blog Heading">
+            <label class="topicLabel">Upload the First image for the Blog</label>
+            <div class="input-group is-invalid">
+                <div class="custom-file">
+                    <input accept="image/*" name="fileDestination" type="file" class="custom-file-input" id="validatedInputGroupCustomFile" required>
+                    <label class="custom-file-label" for="validatedInputGroupCustomFile">Choose File</label>
+                    <img id="displayImageAccordngtotheLink" width="200px" />
+                </div>
+            </div>
             <label class="writingBlogLabel " for=" ">Start Writing Here</label>
             <textarea name="blogDetails" class="textAreaClass " cols="30 " rows="10 "></textarea>
             <button name="submitFormButton" type="submit" class=" submitButtonClass btn btn-primary btn-lg ">PUBLISH</button>

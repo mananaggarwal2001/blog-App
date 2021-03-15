@@ -15,3 +15,7 @@ $(".submitButtonClass").on("click", function() {
         return true;
     }
 })
+$('input[type = file]').change(() => {
+    var filePath = $("#validatedInputGroupCustomFile").val();
+    console.log(filePath);
+})

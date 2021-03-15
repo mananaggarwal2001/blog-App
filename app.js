@@ -30,6 +30,9 @@ app.post("/blogDetails", function(req, res) {
     let catergorySelection = req.body.catergorySelection;
     let topicName = req.body.topicName;
     let blogDetails = req.body.blogDetails;
+    let fileDestination = __dirname + "/" + req.body.fileDestination;
+    console.log(fileDestination);
+
     blogFunction(bloggerName, catergorySelection, topicName, blogDetails);
     res.render("successfulPage");
 })

@@ -47,7 +47,7 @@
             margin-right: 15rem;
             border-style: solid;
             border-radius: 4%;
-            height: 64.5rem;
+            height: 72.5rem;
         }
         
         .blogForm {
@@ -101,4 +101,8 @@
             font-family: 'Monserrat', sans-serif;
             font-size: 2rem;
             font-style: italic;
+        }
+        
+        #file {
+            display: none;
         }
