@@ -26,7 +26,7 @@
 - Now For Writing the Blog
   + FOR MOBILE USERS OR ANY OTHER MEDIUM USER :
     +  Scroll down to the last of the Website.
-    +  In the right bottom Side the plus is given For creating the Vlog.
+    +  In the right bottom Side the plus is given For creating the Blog.
   + FOR DEKSTOP USERS :
     + The plus sign is fixed for those who are cloning the website in the dekstop in the right bottom  side of the screen .
   
