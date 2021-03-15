@@ -32,7 +32,7 @@
 ##### CLONE THE REPISOTERY AND INSTALL THE DEPENDENCIES   
 >  git clone https://github.com/mananaggarwal2001/BlogWebsite.git
 
->  cd BlogWebsite
+>  cd BlogWebsite/
 
 > npm install  (Name of the dependencies)
 
