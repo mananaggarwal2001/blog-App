@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create login Page</title>
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Cookie&family=Damion&family=Grand+Hotel&family=Just+Another+Hand&family=Lobster&family=Sacramento&family=Satisfy&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/640bd853df.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/blogcreation.css">
+</head>
+
+<body>
+    <div class="blogHeadingClass">
+        <img src="images/Strength.jpg" alt="" srcset="" class="strengthImage">
+        <h1 class="knowStrengthHeading">Know Strength</h1>
+    </div>
+    <div class="formElements">
+        <form class="form-group" action="/blogDetails" method="POST" enctype="application/x-www-form-urlencoded">
+            <label class="nameFormPart" for="">Name of the blogger</label>
+            <input name="bloggerName" class=" bloggerNameClass form-control form-control-md " type="text " placeholder="Blogger Name">
+
+            <label class="preferenceLabel " for=" ">Choose Category for Blog</label>
+            <select name=" bloggerOptionClass catergorySelection" class="form-control form-control-md ">
+                <option>Sports</option>
+                <option>Politics</option>
+                <option>Jokes</option>
+                <option>News</option>
+                <option>Others</option>
+            </select>
+            <label class="topicLabel">Heading For Blog</label>
+            <input class=" bloggerHeadingClass form-control form-control-md" name="topicName" type="text" placeholder="Blog Heading">
+            <label class="writingBlogLabel " for=" ">Start Writing Here</label>
+            <textarea name="blogDetails" class="textAreaClass " cols="30 " rows="10 "></textarea>
+            <button name="submitFormButton" type="submit" class=" submitButtonClass btn btn-primary btn-lg ">PUBLISH</button>
+        </form>
+    </div>
+
+    </div>
+    <hr>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js " integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin=" anonymous "></script>
+    <script src="creatingblog.js "></script>
+</body>
+
+</html>

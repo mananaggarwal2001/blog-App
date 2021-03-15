@@ -1,0 +1,156 @@
+<%-include('partials/header')-%>
+    <!--Cover Page-->
+    <div class="coverDiv container-fluid">
+        <div class="headingClass">
+            <div class="headingSubClass container-fluid">
+                <h1 class="knowStrength">Know Strength</h1>
+                <p class="headingParagraph">A PlatForm Where You Can Express Your Blogging Skills</p>
+            </div>
+        </div>
+        <div class=" components container-fluid">
+            <a href="#planSection">
+                <p class="home">Plan</p>
+            </a>
+            <a href="#contactMeSection">
+                <p class="contactMe">Contact Me</p>
+            </a>
+            <a href="#aboutSection">
+                <p class="about">About</p>
+            </a>
+
+            <i class="searchBulb fas fa-search fa-lg"></i>
+        </div>
+    </div>
+
+    <form class="toggleSearchForm" method="POST" action="/searchForBlog" enctype="application/x-www-form-urlencoded">
+        <input class="toggleSearchClass" name="blogHeadingName" type="text" placeholder="Search For Blog Heading" autocomplete="off"></input>
+        <Button class="searchSubmitClass" type="submit"><i class="toggleSearchBulb fas fa-search fa-lg"></i></Button>
+    </form>
+
+    <div class="plusClass">
+        <a class="linkToCreateBlogClass" href="createblog.html">
+            <h1 class="plusSign">+</h1>
+        </a>
+    </div>
+    <div class=" container-fluid contentClass">
+        <div class=" sports caterGory col">
+            <form action="/sports" method="get">
+                <button type="submit" class="sportsButton">Sports</button>
+            </form>
+        </div>
+        <div class=" politics caterGory col">
+            <form action="/politics" method="get">
+                <button type="submit" class="politicsButton">Politics</button>
+            </form>
+        </div>
+        <div class=" jokes caterGory col">
+            <form action="/jokes" method="get">
+                <button type="submit" class="jokesButton">Jokes</button>
+            </form>
+        </div>
+        <div class=" news caterGory col">
+            <form action="/news" method="get">
+                <button type="submit" class="newsButton">News</button>
+            </form>
+        </div>
+        <div class=" others  caterGory col">
+            <form action="/others" method="get">
+                <button type="submit" class="otherButton">Others</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Used For Rotating The Vlogs  -->
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class=" blogRotating carousel-inner">
+            <div class=" container blogitemActiveClass carousel-item active ">
+                <img src=" images/CoverPage.jpg" class=" active_image d-block w-5" alt="...">
+                <div class="activeimageComponentContainer">
+
+                    <h1 class="blogHeading">Welcome To The World of the blogs</h1>
+                    <p class="blogParagraph"> In This blog platform you saw the amazing blogs that are created by amazing talented people. </p>
+                </div>
+            </div>
+
+            <% for(let i=0;i<blogArray.length;i++){ %>
+                <div class=" container blogitemActiveClass carousel-item ">
+                    <img src=" images/CoverPage.jpg " class=" active_image d-block w-5 " alt="... ">
+                    <div class="activeimageComponentContainer ">
+
+                        <h1 class="blogHeading ">
+                            <%= blogArray[i].topicName %>
+                        </h1>
+                        <p class="blogParagraph ">
+                            <%= blogArray[i].blogDetails %>
+                        </p>
+                    </div>
+                    <a href="/particularBlog/<%=blogArray[i].topicName%>" class="read-more "><button type="submit " class=" btn btn-warning ">Read More</button></a>
+                </div>
+
+                <%}%>
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+
+
+    <!-- Pyement Options -->
+    <div id="planSection " class=" container-fluid paymentHeadingdiv ">
+        <h1 class="planClass ">A Plan For Every Blogger</h1>
+        <h4 class="planComponentClass ">Who wants To Share Their Own Thoughts</h4>
+    </div>
+    <div class="paymentCardsClass card-deck ">
+        <div class=" cardClass card ">
+            <h1 class=" cardHeading card-title ">Trial Version</h1>
+            <hr noshade>
+            <div class=" cardsComponent card-body ">
+                <p class=" cardDetails card-text ">Starting 5 blogs</p>
+                <p class=" cardDetails card-text ">Limited Words Upto 1000</p>
+                <p class=" cardDetails card-text ">Max 3 pictures Allowed</p>
+                <button type="button " class="btn btn-primary btn-block btn-lg " name="button ">Try For Free</button>
+            </div>
+        </div>
+        <div class=" cardClass card ">
+            <h1 class=" cardHeading card-title ">Premium Version 1</h1>
+            <hr noshade>
+            <div class=" cardsComponent card-body ">
+                <p class=" cardDetails card-text ">Starting 100 Blogs.</p>
+                <p class=" cardDetails card-text ">Limited Words Upto 5000 </p>
+                <p class=" cardDetails card-text ">Max 10 Pictures Allowed</p>
+                <button type="button " class="btn btn-primary btn-block btn-lg " name="button ">Pay Rs 2000</button>
+            </div>
+        </div>
+        <div class=" cardClass card ">
+            <h1 class=" cardHeading card-title ">Premium Version 2</h1>
+            <hr noshade>
+            <div class=" cardsComponent card-body ">
+                <p class=" cardDetails card-text ">Unlimited Blogs</p>
+                <p class=" cardDetails card-text ">Unlimited Words</p>
+                <p class=" cardDetails card-text ">Unlimited Pictures</p>
+                <button type="button " class="btn btn-primary btn-lg btn-block " name="button ">Pay Rs 5000/Month</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+
+    <div id="aboutSection " class="myDescription ">
+
+        <img class="ownDescriptionClass " src="images/manan.jpg " alt="Manan Aggarwal ">
+        <div class="aboutMe ">
+            <h1 class="aboutMeHeading ">About Me:-</h1>
+            <p class="descriptionParagraph ">
+                I am Manan Aggarwal Currently persuing Btech Computer Science and Engineering From Jims Collage presenting you the Blog Platform Created By Me.
+        </div>
+        </p>
+    </div>
+    <%-include('partials/footer')-%>
