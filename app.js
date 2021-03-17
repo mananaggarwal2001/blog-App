@@ -66,6 +66,12 @@ app.post("/searchForBlog", (req, res) => {
 
 });
 
+app.get("/catergory", (req, res) => {
+    res.render("catergoryPage", {
+        blogArray: objectArray
+    });
+});
+
 app.listen("3000", function() {
     console.log("Server is listning to the port 3000");
 });

@@ -5,6 +5,14 @@
         height: 40rem;
     }
     
+    .sucessfull {
+        font-weight: bolder;
+    }
+    
+    .lead {
+        font-weight: bolder;
+    }
+    
     .toggleSearchForm {
         display: inline-block;
         position: absolute;
@@ -588,4 +596,30 @@
             left: 0.001rem;
             width: 15rem;
         }
+    }
+    /* Catergory Page Design template  */
+    
+    .catergoryColoumn {
+        background-color: inherit;
+        border-color: black;
+        border-width: 6px;
+        border-radius: 10%;
+        overflow: hidden;
+        width: 30rem;
+        height: 30rem;
+    }
+    
+    .particularBlogReadMore {
+        position: absolute;
+        background-color: inherit;
+        left: 40%;
+        top: 26.2rem;
+    }
+    
+    .readmorebutton {
+        font-size: 1.5rem;
+    }
+    
+    .cardParagraph {
+        font-weight: bolder;
     }
