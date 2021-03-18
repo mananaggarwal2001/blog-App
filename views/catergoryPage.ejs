@@ -11,50 +11,56 @@
 
     <div class=" container-fluid contentClass">
         <div class=" sports caterGory col">
-            <form action="/sports" method="get">
-                <button type="submit" class="sportsButton">Sports</button>
+            <form action="/" method="POST" enctype="application/x-www-form-urlencoded">
+                <button type="submit" name="catergory" class="sportsButton" value="Sports">Sports</button>
             </form>
         </div>
         <div class=" politics caterGory col">
-            <form action="/politics" method="get">
-                <button type="submit" class="politicsButton">Politics</button>
+            <form action="/" method="POST" enctype="application/x-www-form-urlencoded">
+                <button type="submit" name="catergory" class="politicsButton" value="Politics">Politics</button>
             </form>
         </div>
         <div class=" jokes caterGory col">
-            <form action="/jokes" method="get">
-                <button type="submit" class="jokesButton">Jokes</button>
+            <form action="/" method="POST" enctype="application/x-www-form-urlencoded">
+                <button type="submit" name="catergory" class="jokesButton" value="Jokes">Jokes</button>
             </form>
         </div>
         <div class=" news caterGory col">
-            <form action="/news" method="get">
-                <button type="submit" class="newsButton">News</button>
+            <form action="/" method="POST" enctype="application/x-www-form-urlencoded">
+                <button type="submit" name="catergory" class="newsButton" value="News">News</button>
             </form>
         </div>
         <div class=" others  caterGory col">
-            <form action="/others" method="get">
-                <button type="submit" class="otherButton">Others</button>
+            <form action="/" method="POST" enctype="application/x-www-form-urlencoded">
+                <button type="submit" name="catergory" class="otherButton" value="Others">Others</button>
             </form>
         </div>
     </div>
 
+    <div class="plusClass">
+        <a class="linkToCreateBlogClass" href="createblog.html">
+            <h1 class="plusSign">+</h1>
+        </a>
+    </div>
 
-    <div class="card-columns ">
+
+    <div class="card-columns cardclass ">
         <% blogArray.forEach(element =>{ %>
-            <div class="card catergoryColoumn">
-                <div class="card-body">
-                    <h1 class="card-title">
-                        <%= element.topicName %>
-                            </h5>
-                            <hr>
-                            <p class="card-text cardParagraph">
-                                <%= element.blogDetails.substring(0,150) %> ...
+            <%if(element.catergorySelection===chosenCatergory){%>
+                <div class="card catergoryColoumn">
+                    <div class="card-body">
+                        <h1 class="card-title">
+                            <%= element.topicName %>
+                                </h5>
+                                <hr>
+                                <p class="card-text cardParagraph">
+                                    <%= element.blogDetails.substring(0,300) %> ...
 
-                            </p>
-
-
+                                </p>
+                    </div>
+                    <a href="/particularBlog" class="read-more particularBlogReadMore "><button type="submit " class=" btn btn-outline-dark readmorebutton  ">Read More</button></a>
                 </div>
-                <a href="/particularBlog" class="read-more particularBlogReadMore "><button type="submit " class=" btn btn-outline-dark readmorebutton  ">Read More</button></a>
-            </div>
-            <% }) %>
+                <%}%>
+                    <% }) %>
 
     </div>

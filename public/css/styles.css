@@ -623,3 +623,14 @@
     .cardParagraph {
         font-weight: bolder;
     }
+    
+    .contentClass {
+        margin-bottom: 2rem;
+    }
+    
+    @media screen and (max-width: 991px) {
+        .contentClass {
+            position: relative;
+            top: 10px;
+        }
+    }

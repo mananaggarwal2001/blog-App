@@ -65,10 +65,12 @@ app.post("/searchForBlog", (req, res) => {
     })
 
 });
-
-app.get("/catergory", (req, res) => {
-    res.render("catergoryPage", {
-        blogArray: objectArray
+app.post("/", (req, res) => {
+    let catergoryVariable = req.body.catergory;
+    console.log(catergoryVariable);
+    res.render('catergoryPage', {
+        blogArray: objectArray,
+        chosenCatergory: catergoryVariable
     });
 });
 
