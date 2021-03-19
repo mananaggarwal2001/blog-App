@@ -41,4 +41,16 @@
 > node app.js
 
 #### INSPIRATION 
-😀 Random thought in my mind.        
+😀 Random thought in my mind. 
+
+#### HERE ARE THE SAMPLE SCREENSHOTS OF MY PROJECT
+<hr>
+
+- **COVER TEMPLATE**
+
+<img width="800" src = "https://user-images.githubusercontent.com/75381077/111664849-3691c100-8838-11eb-94a9-c316e6374970.PNG">
+
+- **BLOG WRITING  TEMPLATE**
+
+
+<img width="800" src = "https://user-images.githubusercontent.com/75381077/111665540-d7807c00-8838-11eb-8538-f2f739242653.PNG">
