@@ -40,6 +40,10 @@
 #### TO START THE SERVER
 > node app.js
 
+#### HEROKU SERVER LINK TO MY BLOG PAGE
+
+ **[BLOG PAGE](https://anonymousmanan-2001.herokuapp.com/)**
+
 #### INSPIRATION 
 😀 Random thought in my mind. 
 
