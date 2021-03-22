@@ -31,7 +31,6 @@ app.post("/blogDetails", function(req, res) {
     let topicName = req.body.topicName;
     let blogDetails = req.body.blogDetails;
     let fileDestination = __dirname + "/" + req.body.fileDestination;
-    console.log(fileDestination);
 
     blogFunction(bloggerName, catergorySelection, topicName, blogDetails);
     res.render("successfulPage");
@@ -67,7 +66,6 @@ app.post("/searchForBlog", (req, res) => {
 });
 app.post("/", (req, res) => {
     let catergoryVariable = req.body.catergory;
-    console.log(catergoryVariable);
     res.render('catergoryPage', {
         blogArray: objectArray,
         chosenCatergory: catergoryVariable
