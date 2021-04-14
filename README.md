@@ -11,10 +11,10 @@
   + All the blogs are shown in the form of sliding format.
 
 ### DEPENDENCIES
-- body-parser: ^1.19.0
-- ejs: ^3.1.6
-- express: ^4.17.1  
-- lodash: ^4.17.21  
+- **body-parser: ^1.19.0**
+- **ejs: ^3.1.6**
+- **express: ^4.17.1**  
+- **lodash: ^4.17.21**  
   
 ###  LINK TO THE TEMPLATE OF THIS WEBSITE
 
