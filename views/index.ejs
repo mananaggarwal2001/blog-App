@@ -78,14 +78,14 @@
                     <img src=" images/CoverPage.jpg " class=" active_image d-block w-5 " alt="... ">
                     <div class="activeimageComponentContainer ">
 
-                        <h1 class="blogHeading ">
+                        <h1 name="blogHeading" class="blogHeading ">
                             <%= blogArray[i].topicName %>
                         </h1>
-                        <p class="blogParagraph ">
+                        <p name="blogParagraph" class="blogParagraph ">
                             <%= blogArray[i].blogDetails %>
                         </p>
                     </div>
-                    <a href="/particularBlog/<%=blogArray[i].topicName%>" class="read-more "><button type="submit " class=" btn btn-warning ">Read More</button></a>
+                    <a href="/particularBlog/<%=blogArray[i]._id%>" class="read-more "><button type="submit " class=" btn btn-warning ">Read More</button></a>
                 </div>
 
                 <%}%>
