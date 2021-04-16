@@ -4,7 +4,13 @@ const app = express();
 const _ = require('lodash');
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb://localhost:27017/blogDetailDB", { useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://admin-Manan:manan9319054970@cluster0.dquuo.mongodb.net/blogDetailDB", { useUnifiedTopology: true }, (err) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log("DataBase Connected Successfully");
+    }
+});
 
 
 const mainDetailsSchema = mongoose.Schema({
@@ -35,7 +41,6 @@ function blogFunction(bloggerName, catergorySelection, topicName, blogDetails) {
         topicName: topicName,
         blogDetails: blogDetails
     });
-    blogArray.push(newBlog);
     newBlog.save(); // Saving in the blog model
 }
 
