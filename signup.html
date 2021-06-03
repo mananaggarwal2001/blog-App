@@ -21,19 +21,22 @@
         <h1 class="loginHeading">Login</h1>
         <form>
             <div class=" usernameClass form-group">
-                <label for="exampleInputEmail1">Username</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type Your Username" required>
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <label for="exampleInputEmail1" class="usernameLabel">Username</label>
+                <input type="email" class="form-control emailClass" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type Your Username" required>
             </div>
             <div class=" passwordClass form-group">
-                <label for="exampleInputPassword1">Password</label>
+                <label for="exampleInputPassword1" class="passwordLabel">Password</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Type Your Password" required>
             </div>
-            <button type="submit" class="btn btn-primary btn-lg">Login</button>
-            <p>Or Sign Up With</p>
-            <button><img src="public/images/GoogleIcon.png" alt="googleIcon"></button>
-            <button><img src="public/images/TwitterIcon.png" alt="googleIcon"></button>
-            <button><img src="public/images/FacebookIcon.png" alt="googleIcon"></button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block loginButton">Login</button>
+            <p class="signUpParagraphClass">Or Sign Up With</p>
+            <button class="googleButtonClass"><img class="googleImage" src="public/images/GoogleIcon.png" alt="googleIcon"></button>
+            <button class="twitterButtonClass"><img class="TwitterImage" src="public/images/TwitterIcon.png" alt="googleIcon"></button>
+            <button class="facebookButtonClass"><img class="FacebookImage"  src="public/images/FacebookIcon.png" alt="googleIcon"></button>
+            <div class="registrationClass">
+                <p>Or Sign Up Using</p>
+                <a class="signUpClass" href="">SIGN UP</a>
+            </div>
 
         </form>
     </div>
