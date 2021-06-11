@@ -9,158 +9,56 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cookie&family=Just+Another+Hand&family=Pacifico&family=Playfair+Display+SC:ital,wght@0,900;1,900&family=Sacramento&family=Tangerine:wght@700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/640bd853df.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="public/css/styles2.css">
 </head>
 
 <body>
+    <div class="headingClass">
 
-    <!--Cover Page-->
-    <div class="coverDiv container-fluid">
-        <div class="headingClass">
-            <div class="headingSubClass container-fluid">
-                <h1 class="knowStrength">Know Strength</h1>
-                <p class="headingParagraph">A PlatForm Where You Can Express Your Blogging Skills</p>
-            </div>
-        </div>
-        <div class=" components container-fluid">
-            <a href="#planSection">
-                <p class="home">Plan</p>
-            </a>
-            <a href="#contactMeSection">
-                <p class="contactMe">Contact Me</p>
-            </a>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-transparent">
+            <img class="StrengthImageClass" src="./public/images/Strength.jpg" alt="Strength" srcset="">
+            <button class=" togglerClass navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span  class=" mr-sm-1 navbar-toggler-icon"></span>
+            </button>
 
-            <a href="#aboutSection">
-                <p class="about">About</p>
-            </a>
-            <i class="searchBulb fas fa-search fa-lg"></i>
-        </div>
-    </div>
+            <div class=" collapse navbar-collapse" id="navbarSupportedContent">
 
-    <form class="toggleSearchForm" method="POST" action="/">
-        <input class="toggleSearchClass" type="text" placeholder="Search"></input>
-        <Button class="searchSubmitClass" type="submit"><i class="toggleSearchBulb fas fa-search fa-lg"></i></Button>
-    </form>
+                <ul class="topicClass navbar-nav mr-auto">
 
-    <div class="plusClass">
-        <a class="linkToCreateBlogClass" href="createblog.html">
-            <h1 class="plusSign">+</h1>
-        </a>
-    </div>
-    <div class=" container-sm contentClass">
-        <div class=" sports caterGory col">Sports</div>
-        <div class=" politics caterGory col">Politics</div>
-        <div class=" jokes caterGory col">Jokes</div>
-        <div class=" news caterGory col">News</div>
-        <div class=" others  caterGory col">Others</div>
-    </div>
+                    <li class=" nav-item active">
+                        <a style="color:white" class="   nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class=" nav-item">
+                        <a style="color:white" class="  nav-link" href="#">Contact Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color:white" class="  nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color:white" class="  nav-link" href="#">Create Blog</a>
+                    </li>
+                </ul>
+                <form method="POST" class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search for blogs" aria-label="Search">
+                    <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <form method="POST" class="form-inline my-2 my-lg-0">
+                    <button class=" logoutClass btn btn-danger my-2 my-sm-0" type="submit">Logout</button>
+                </form>
 
-    <!-- Used For Rotating The Vlogs  -->
 
-    <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
-        <div class=" blogRotating carousel-inner">
-            <div class=" container blogitemActiveClass carousel-item active">
-                <img src=" public/images/CoverPage.jpg" class=" active_image d-block w-5" alt="...">
-                <div class="activeimageComponentContainer">
-                    <h1 class="blogHeading">Heading 1</h1>
-                    <p class="blogParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, sunt. Necessitatibus porro eum, pariatur numquam ea laboriosam soluta eaque veritatis a provident, facere fuga eos quia quas commodi consequatur esse? Lorem Ipsum is
-                        simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                </div>
-                <a class="read-more">Read More</a>
             </div>
 
-            <div class=" container blogitemActiveClass carousel-item ">
-                <img src=" public/images/CoverPage.jpg" class=" active_image d-block w-5" alt="...">
-                <div class="activeimageComponentContainer">
-                    <h1 class="blogHeading">Heading 1</h1>
-                    <p class="blogParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, sunt. Necessitatibus porro eum, pariatur numquam ea laboriosam soluta eaque veritatis a provident, facere fuga eos quia quas commodi consequatur esse? Lorem Ipsum is
-                        simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                </div>
-                <a class="read-more">Read More</a>
-            </div>
-
-
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-
+        </nav>
+        <div class="SubHeadingClass col col-lg-6">
+            <h1 class="mainHeadingClass">Know Strength</h1>
+            <p class="mainSubHeadingClass">A Platform where you can express your Blogging Skills</p>
         </div>
     </div>
-    <!-- Pyement Options -->
-    <div id="planSection" class=" container paymentHeadingdiv">
-        <h1 class="planClass">A Plan For Every Blogger</h1>
-        <h4 class="planComponentClass">Who wants To Share Their Own Thoughts</h4>
-    </div>
-    <div class="paymentCardsClass card-deck">
-        <div class=" cardClass card">
-            <h1 class=" cardHeading card-title">Trial Version</h1>
-            <hr noshade>
-            <div class=" cardsComponent card-body">
-                <p class=" cardDetails card-text">Starting 5 blogs</p>
-                <p class=" cardDetails card-text">Limited Words Upto 1000</p>
-                <p class=" cardDetails card-text">Max 3 pictures Allowed</p>
-                <button type="button" class="btn btn-primary btn-block btn-lg" name="button">Try For Free</button>
-            </div>
-        </div>
-        <div class=" cardClass card">
-            <h1 class=" cardHeading card-title">Premium Version 1</h1>
-            <hr noshade>
-            <div class=" cardsComponent card-body">
-                <p class=" cardDetails card-text">Starting 100 Blogs.</p>
-                <p class=" cardDetails card-text">Limited Words Upto 5000 </p>
-                <p class=" cardDetails card-text">Max 10 Pictures Allowed</p>
-                <button type="button" class="btn btn-primary btn-block btn-lg" name="button">Pay Rs 2000</button>
-            </div>
-        </div>
-        <div class=" cardClass card">
-            <h1 class=" cardHeading card-title">Premium Version 2</h1>
-            <hr noshade>
-            <div class=" cardsComponent card-body">
-                <p class=" cardDetails card-text">Unlimited Blogs</p>
-                <p class=" cardDetails card-text">Unlimited Words</p>
-                <p class=" cardDetails card-text">Unlimited Pictures</p>
-                <button type="button" class="btn btn-primary btn-lg btn-block" name="button">Pay Rs 5000/Month</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- About Me Section -->
-
-    <div id="aboutSection" class="myDescription">
-
-        <img class="ownDescriptionClass" src="public/images/manan.jpg" alt="Manan Aggarwal">
-        <div class="aboutMe">
-            <h1 class="aboutMeHeading">About Me:-</h1>
-            <p class="descriptionParagraph">
-                I am Manan Aggarwal Currently persuing Btech Computer Science and Engineering From Jims Collage presenting you the Blog Platform Created By Me.
-        </div>
-        </p>
-    </div>
-
-    <div id="contactMeSection" class="footerClass">
-        <footer class="footerSection">
-            <h2 class="footerContactMe">Contact Me :-</h2>
-            <a class="fontawesomelink" href="https://www.facebook.com/"><i class=" fontawesomeicon fab fa-facebook-square fa-2x"></i></a>
-            <a class="fontawesomelink" href="https://www.instagram.com/"><i class=" fontawesomeicon fab fa-twitter fa-2x"></i></a>
-            <a class="fontawesomelink" href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class=" fontawesomeicon fas fa-envelope fa-2x"></i></a>
-            <a class="fontawesomelink" href="https://www.instagram.com/"><i class=" fontawesomeicon fab fa-instagram fa-2x"></i></a>
-            <p class="phoneNumber">Phone No:- 9319054970</p>
-        </footer>
-
-
-        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-        <script src="public/index.js"></script>
-
-    </div>
-
-
 </body>
 
 </html>
