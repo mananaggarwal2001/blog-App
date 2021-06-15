@@ -1,5 +1,5 @@
 .headingClass {
-    background-image: url("https://wallpaperaccess.com/full/349872.jpg");
+    background-image: url("https://wallpapercave.com/wp/wp5123161.jpg");
     height: 45rem;
     width: 100%;
     background-position: center;
@@ -67,16 +67,6 @@
     height: auto;
 }
 
-.CardImage {
-    height: 20rem;
-}
-
-.cardClass {
-    position: relative;
-    left: 25%;
-    width: 55%;
-}
-
 .marginHorizontalRowClass {
     visibility: hidden;
     margin-top: 10rem;
@@ -136,7 +126,7 @@
 
 @media only screen and (max-width: 991px) {
     .headingClass {
-        background-image: url("https://wallpaperaccess.com/full/349872.jpg");
+        background-image: url("https://wallpapercave.com/wp/wp5123161.jpg");
         width: 100%;
         background-position: center;
         height: 45rem;
@@ -147,5 +137,56 @@
         width: 20rem;
         position: relative;
         left: 20rem;
+    }
+}
+
+
+/* Catergory Form Class  */
+
+.CardImage {
+    height: 10%;
+}
+
+.cardClass {
+    position: relative;
+    left: 25%;
+    width: 60%;
+}
+
+.AdventureParentClass {
+    width: 99.5%;
+}
+
+.AdventureGPClass {
+    overflow: hidden;
+}
+
+.AdventureClass {
+    width: 100%;
+}
+
+.card-title {
+    display: inline-block;
+    font-family: 'Merriweather', serif;
+    font-size: 200%;
+    position: relative;
+    top: 40%;
+    left: 30%;
+}
+
+.particularCardClass:hover {
+    font-size: 110%;
+    filter: brightness(130%);
+}
+
+@media (min-width:1200px) and (max-width:1700px) {
+    .card-title {
+        font-size: 150%;
+    }
+}
+
+@media (min-width:1200px) and (max-width:1372px) {
+    .card-title {
+        font-size: 120%;
     }
 }
