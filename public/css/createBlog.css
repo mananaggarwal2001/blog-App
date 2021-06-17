@@ -149,3 +149,8 @@
         left: 20rem;
     }
 }
+
+.navbar {
+    position: relative;
+    z-index: initial;
+}
