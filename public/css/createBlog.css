@@ -154,3 +154,36 @@
     position: relative;
     z-index: initial;
 }
+
+
+/* Blog creation button class */
+
+.blogCreationButton {
+    width: 40%;
+    position: relative;
+    left: 30%;
+    margin-top: 20%;
+    border-radius: 25rem;
+    margin-bottom: 10%;
+    font-weight: bolder;
+    font-size: 160%;
+}
+
+.blogCreationClass {
+    border-style: solid;
+    border-radius: 3%;
+}
+
+.formComponentsClass {
+    position: relative;
+    width: 60%;
+    left: 20%;
+    padding-top: 5%;
+}
+
+.formLabelClass {
+    font-weight: bolder;
+    margin-bottom: 3%;
+    font-size: 130%;
+    margin-top: 5%;
+}

@@ -67,39 +67,48 @@
         </div>
     </div>
     <div class="container-lg row row-cols-lg-1 row-cols-md-1 ml-auto mr-lg-auto mr-sm-auto mr-md-auto">
-        <form>
-            <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <label for="validationServer01">Blog Name</label>
-                    <input type="text" class="form-control " placeholder="Enter the Blog Name" required>
+        <form method="POST" class="blogCreationClass mt-5 mb-5">
+            <div class="formComponentsClass">
+                <div class="form-group">
+                    <label for="inputAddress" class="formLabelClass">Your Name</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Enter Your Name " autocomplete="off" required>
                 </div>
-                <div class="col-md-6 mb-3">
-                    <label for="validationServer02">Blog Heading</label>
-                    <input type="text" class="form-control " id="validationServer02" required>
+                <div class="form-group">
+                    <label for="inputAddress" class="formLabelClass">Blog Website Hosting Name</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Enter the Blog Name " autocomplete="off" required>
                 </div>
-            </div>
-            <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <label for="validationServer03">City</label>
-                    <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+
+                <div class=" form-group ">
+                    <label for="inputAddress2 " class="formLabelClass">Blog Heading</label>
+                    <input type="text " class="form-control " id="inputAddress2 " placeholder="Enter the Blog Heading " autocomplete="off" required>
                 </div>
-                <div class="col-md-3 mb-3">
-                    <label for="validationServer04">State</label>
-                    <select class="custom-select" id="validationServer04" aria-describedby="validationServer04Feedback" required>
-                  <option selected disabled value="">Choose the Blog Catergory</option>
-                  <option>...</option>
+                <div class="form-group">
+                    <label for="fileUpload" class="formLabelClass">Upload Your First Website Wallpaper</label>
+
+                    <div class="form-group custom-file">
+                        <input type="file" class="custom-file-input form-control" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+                </div>
+
+                <div class=" form-group ">
+                    <div class="form-group ">
+                        <label for="inputState " class="formLabelClass"> Blog Catergory</label>
+                        <select id="inputState " class="form-control " required>
+                  <option selected>Nature</option>
+                  <option>Photography</option>
+                  <option>Education</option>
+                  <option>Vacation</option>
+                  <option>Travel</option>
+                  <option>Adventure</option>
                 </select>
+                    </div>
                 </div>
-                <div class="col-md-3 mb-3">
-                    <label for="validationServer05">Zip</label>
-                    <input type="text" class="form-control " id="validationServer05" aria-describedby="validationServer05Feedback" required>
-                </div>
+                <button type="submit " class=" blogCreationButton btn btn-primary btn-block ">Start Writing</button>
             </div>
-
-            <button class="btn btn-primary" type="submit">Submit</button>
         </form>
-    </div>
 
+    </div>
 </body>
 
 </html>
