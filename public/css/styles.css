@@ -1,636 +1,149 @@
-    .coverDiv {
-        background-image: url("https://images.alphacoders.com/862/862729.jpg");
-        background-position: center;
-        background-size: cover;
-        height: 40rem;
-    }
-    
-    .sucessfull {
-        font-weight: bolder;
-    }
-    
-    .lead {
-        font-weight: bolder;
-    }
-    
-    .toggleSearchForm {
-        display: inline-block;
-        position: absolute;
-        left: 90.6rem;
-        bottom: 49.5rem;
-        width: 22rem;
-    }
-    /* ReadMore Option Settings */
-    
-    .activeimageComponentContainer {
-        overflow: hidden;
-        height: 120px;
-    }
-    
-    .read-more:hover {
-        cursor: pointer;
-    }
-    
-    .read-more {
-        background-color: inherit;
-        border-style: none;
-        border-color: inherit;
-    }
-    
-    .btn {
-        color: ivory;
-    }
-    
-    .btn:hover {
-        color: ivory;
-    }
-    
-    .btn:focus {
-        color: ivory;
-    }
-    /* .showContent {
-    overflow: visible;
-    height: auto;
-} */
-    
-    .toggleSearchClass {
-        width: 17rem;
-        margin-right: 0.5rem;
-        background-color: transparent;
-        color: white;
-        border-style: solid;
-        border-color: white;
-        position: relative;
-        left: 1.5rem;
-    }
-    
-    .more {
-        display: none;
-    }
-    
-    .toggleSearchClass::placeholder {
-        color: white;
-    }
-    
-    .searchSubmitClass {
-        background-color: transparent;
-        border-style: none;
-        color: white;
-        position: relative;
-        left: 1rem;
-    }
-    
-    .components {
-        width: 25rem;
-        position: relative;
-        left: 45rem;
-        bottom: 12rem;
-    }
-    
-    .coverComponent:hover {
-        color: #ff5e78;
-    }
-    
-    .coverComponent {
-        display: inline-block;
-        width: 7rem;
-        color: white;
-        font-family: 'Pacifico', cursive;
-        font-weight: 900;
-    }
-    
-    .headingClass {
-        display: inline-block;
-        background: rgba(216, 194, 146, 0.7);
-        position: relative;
-        left: 45rem;
-        top: 15rem;
-        width: 30rem;
-        height: 15rem;
-    }
-    
-    .home,
-    .about,
-    .contactMe {
-        display: inline-block;
-        width: 8rem;
-        color: white;
-        font-family: 'cookie', cursive;
-        font-size: 2.2rem;
-        font-weight: 900;
-    }
-    
-    .home:hover,
-    .contactMe:hover,
-    .about:hover {
-        color: #ff5e78;
-    }
-    
-    .home {
-        width: 4rem;
-        margin-right: 1rem;
-    }
-    
-    .about {
-        width: 2rem;
-    }
-    
-    .contactMe {
-        margin-right: 1rem;
-    }
-    
-    .headingSubClass {
-        color: white;
-        position: relative;
-        opacity: 1;
-        border-style: dashed;
-        border-radius: 10px;
-        height: 15rem;
-        width: 30rem;
-        align-items: center;
-        box-shadow: 10px 10px 20px black;
-    }
-    
-    .knowStrength {
-        position: relative;
-        left: 4rem;
-        width: 20rem;
-        margin-bottom: 4rem;
-        top: 2rem;
-        font-family: 'Pacifico', cursive;
-        font-weight: bolder;
-        font-size: 3rem;
-    }
-    
-    .searchBulb {
-        position: relative;
-        left: 3rem;
-        color: white;
-    }
-    
-    .searchBulb:hover {
-        color: #ff5e78;
-    }
-    
-    .headingParagraph {
-        position: relative;
-        left: 2rem;
-        font-weight: 700;
-    }
-    
-    .plusClass {
-        position: fixed;
-        left: 114rem;
-        bottom: 2rem;
-        border-style: solid;
-        border-radius: 100%;
-        width: 3.5rem;
-        height: 3.5rem;
-        background-image: linear-gradient(red, blue);
-        color: white;
-        box-shadow: 2px 10px 10px black;
-        z-index: 1;
-    }
-    
-    .plusSign {
-        position: relative;
-        left: 9px;
-        bottom: 8px;
-        font-size: 3rem;
-        z-index: 1;
-        visibility: visible;
-        color: ivory;
-    }
-    
-    .plusSign:hover {
-        color: blueviolet;
-    }
-    
-    .linkToCreateBlogClass:hover {
-        text-decoration: none;
-    }
-    
-    .linkToCreateBlogClass:active {
-        color: ivory;
-    }
-    
-    .contentClass {
-        position: relative;
-        width: 54rem;
-        padding-top: 1rem;
-    }
-    
-    .caterGory {
-        display: inline-block;
-        margin-right: 4rem;
-        width: 6rem;
-        font-size: 2.5rem;
-        font-family: 'pacifico', cursive;
-        font-weight: 900;
-        color: #09015f;
-    }
-    
-    .caterGory:hover {
-        color: #f1f6f9;
-    }
-    
-    body {
-        background-color: #d8c292;
-    }
-    /* Catergory Section */
-    
-    .sports,
-    .politics,
-    .others {
-        width: 6rem;
-    }
-    
-    .sportsButton,
-    .politicsButton,
-    .jokesButton,
-    .newsButton,
-    .otherButton {
-        background-color: inherit;
-        border-style: none;
-    }
-    
-    .sportsButton:hover,
-    .politicsButton:hover,
-    .jokesButton:hover,
-    .newsButton:hover,
-    .otherButton:hover {
-        color: ivory;
-        border-style: none;
-    }
-    
-    .blogRotating {
-        height: 30rem;
-    }
-    /* .component_image {
-    width: 20rem;
-    border-radius: 100%;
-    float: left;
-} */
-    
-    .blogRotating {
-        background-color: rgba(145, 104, 74, 0.5);
-        margin-top: 10rem;
-        height: 25rem;
-        padding-top: 2rem;
-    }
-    
-    .blogitemActiveClass {
-        width: 100rem;
-        position: relative;
-        left: 30rem;
-    }
-    
-    .blogitemComponentClass {
-        width: 100rem;
-        position: relative;
-        left: 28rem;
-    }
-    
-    .active_image,
-    .activeImage,
-    .component_image {
-        width: 20rem;
-        height: 20rem;
-        border-radius: 100%;
-        float: left;
-        margin-right: 5rem;
-    }
-    
-    .activeimageContainer {
-        width: 50rem;
-        height: 18rem;
-    }
-    
-    .activeimageComponentContainer {
-        line-height: 3rem;
-    }
-    
-    .componentimageContainer {
-        width: 50rem;
-        position: relative;
-        right: 4rem;
-    }
-    
-    .blogHeading {
-        font-family: 'Cookie', cursive;
-        font-weight: bolder;
-    }
-    
-    .blogParagraph {
-        font-weight: bolder;
-    }
-    /* ------------------         Payment Options -------------------------------   */
-    
-    .paymentHeadingdiv {
-        margin-top: 15rem;
-        position: relative;
-        left: 8rem;
-        height: 13rem;
-        width: 45rem;
-    }
-    
-    .planClass {
-        font-size: 5rem;
-        font-weight: bolder;
-        font-family: 'Cookie', cursive;
-        position: relative;
-        right: 4rem;
-        margin-bottom: 2rem;
-    }
-    
-    .planComponentClass {
-        font-weight: bolder;
-        position: relative;
-        left: 2rem;
-        margin-bottom: 3rem;
-    }
-    /*------------------------ Payment Card Class ---------------------------------- */
-    
-    .cardClass {
-        background-color: inherit;
-        border-style: solid;
-        border-width: thick;
-        border-color: black;
-    }
-    
-    hr {
-        height: 5px;
-        background-color: black;
-    }
-    
-    .cardHeading {
-        position: relative;
-        left: 8rem;
-        font-family: 'pacifico', cursor;
-        font-weight: bolder;
-        width: 24rem;
-    }
-    
-    .cardDetails {
-        position: relative;
-        left: 27%;
-        line-height: 3.5rem;
-        font-size: 1.5rem;
-        font-weight: bolder;
-        width: 19rem;
-    }
-    
-    .btn {
-        font-weight: bolder;
-    }
-    
-    .footerClass {
-        display: block;
-    }
-    
-    .aboutMe {
-        width: 80%;
-        float: right;
-    }
-    
-    .aboutMeHeading {
-        font-size: 3rem;
-        font-family: 'pacifico', cursive;
-    }
-    
-    .ownDescriptionClass {
-        width: 10rem;
-        height: 10%;
-        border-radius: 100%;
-    }
-    
-    .myDescription {
-        display: inline-block;
-        position: relative;
-        left: 30%;
-        width: 50%;
-        margin-top: 6rem;
-        border-style: outset;
-        border-radius: 10%;
-        border-color: black;
-    }
-    
-    .descriptionParagraph {
-        margin-top: 3rem;
-        font-size: 1.5rem;
-        font-weight: bolder;
-    }
-    /*-------------------------Contact Me Section-------------------------------------*/
-    
-    .footerClass {
-        background-color: #c19065;
-        margin-top: 10rem;
-        height: 20rem;
-    }
-    
-    .footerSection {
-        display: inline-block;
-        position: relative;
-        left: 45%;
-    }
-    
-    .phoneNumber {
-        font-size: 2rem;
-        font-weight: bolder;
-        position: relative;
-        right: 2rem;
-    }
-    
-    .fontawesomeicon {
-        margin-right: 3rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
-    
-    .footerContactMe {
-        font-weight: bolder;
-        position: relative;
-        left: 3rem;
-    }
-    
-    @media screen and (max-width:1080px) {
-        .body {
-            width: inherit;
-            overflow: hidden;
-        }
-        .coverDiv {
-            background-image: url("https://images.alphacoders.com/862/862729.jpg");
+        .headingClass {
+            background-image: url("https://wallpaperaccess.com/full/349872.jpg");
+            height: 45rem;
+            width: 100%;
             background-position: center;
+            background-repeat: no-repeat;
             background-size: cover;
-            height: 40rem;
+        }
+        
+        .SubHeadingClass {
+            display: inline-block;
+            position: relative;
+            left: 38.9%;
+            top: 14rem;
+            color: white;
             width: auto;
         }
-        .components {
-            width: 22rem;
+        
+        .mainHeadingClass {
+            font-size: 5rem;
+            font-family: 'Source Serif Pro', serif;
+        }
+        
+        .topicClass {
+            font-weight: bolder;
+            margin-left: 1.5%;
+        }
+        
+        .togglerClass {
+            background-color: white;
+        }
+        
+        .mainSubHeadingClass {
             position: relative;
-            left: 20rem;
-            height: 2rem;
+            left: 2%;
+            bottom: 8px;
+            font-weight: bolder;
+            font-size: 1.3rem;
         }
-        .headingClass {
+        
+        .logoutClass {
+            margin-left: 10px;
+            margin-right: 5rem;
+        }
+        
+        .StrengthImageClass {
+            border-radius: 100%;
+            width: 4rem;
+            height: 4rem;
+        }
+        
+        .CatergoryElementClass {
+            color: black;
+            font-weight: bolder;
+            font-family: 'Source Serif Pro', serif;
+            font-size: 15px;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .CatergoryElementClass:hover {
+            background-color: #dddddd;
+        }
+        
+        .PostClass {
+            background-color: #fff5eb;
+            height: auto;
+        }
+        
+        .CardImage {
+            height: 20rem;
+        }
+        
+        .cardClass {
             position: relative;
-            left: 20rem;
+            left: 25%;
+            width: 55%;
         }
-        .blogitemActiveClass {
+        
+        .marginHorizontalRowClass {
+            visibility: hidden;
+            margin-top: 10rem;
+        }
+        
+        .horizontalRow {
+            width: 14%;
+            margin-bottom: 2.5rem;
             position: relative;
-            left: 10rem;
+            right: 0.5%;
         }
-        .active_image {
-            width: 15rem;
-            height: 15rem;
+        
+        .featurePostHeadingClass {
+            display: inline-block;
             position: relative;
-            right: 5rem;
+            left: 43%;
+            margin-top: 2rem;
+            font-family: 'Arvo', serif;
         }
-        .blogHeading {
-            font-size: 2.5rem;
-        }
-        .activeimageComponentContainer {
+        /* Bottom Class in the Css Content */
+        
+        .endingClass {
+            background-image: url("https://wallpaperaccess.com/full/3910193.jpg");
+            height: 25rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 0;
+            color: white;
             position: relative;
-            right: 9rem;
-            width: 37rem;
-            height: 10rem;
+            bottom: 20%;
         }
-        .read-more {
+        
+        .endingClasstext {
             position: relative;
-            right: 9rem;
+            left: 43%;
+            top: 40%;
+            width: 18%;
+            font-family: 'Source Serif Pro', serif;
         }
-        .cardHeading {
+        
+        .endingClassElement {
             position: relative;
-            left: 0.3rem;
-            width: 21rem;
-        }
-        .cardDetails {
-            position: relative;
-            left: 0.4rem;
-            width: 18.5rem;
-        }
-        .myDescription {
             width: 80%;
-            position: relative;
-            left: 10rem;
+            left: 11%;
+            font-size: 300%;
         }
-        .footerSection {
-            position: relative;
-            left: 23rem;
+        
+        .endingClassRow {
+            margin-top: 12%;
+            border: 4px solid white;
+            border-radius: 25rem;
+            margin-bottom: 10%;
         }
-        /* SearchBar*/
-        .toggleSearchForm {
-            display: inline-block;
-            position: absolute;
-            left: 44.6rem;
-            bottom: 45rem;
-            width: auto;
+        
+        @media only screen and (max-width: 991px) {
+            .headingClass {
+                background-image: url("https://wallpaperaccess.com/full/349872.jpg");
+                width: 100%;
+                background-position: center;
+                height: 45rem;
+                background-repeat: no-repeat;
+            }
+            .SubHeadingClass {
+                display: inline-block;
+                width: 20rem;
+                position: relative;
+                left: 20rem;
+            }
         }
-        .paymentHeadingdiv {
-            position: relative;
-            left: 8rem;
-            width: 43rem;
-        }
-        .plusClass {
-            position: relative;
-            top: 142rem;
-            left: 93%;
-            z-index: 1;
-        }
-    }
-    
-    @media screen and (max-width:991px) {
-        .components {
-            position: relative;
-            left: 19.5rem;
-        }
-        .toggleSearchForm {
-            position: absolute;
-            top: 6rem;
-            left: 40.5rem;
-        }
-        .headingClass {
-            position: relative;
-            left: 18rem;
-        }
-        .contentClass {
-            display: inline-block;
-            position: relative;
-            left: 3rem;
-            bottom: 4rem;
-        }
-        .active_image {
-            width: 10rem;
-            height: 10rem;
-            margin-right: 6rem;
-        }
-        .activeimageComponentContainer {
-            width: 27rem;
-            height: 120px;
-        }
-        .blogitemActiveClass {
-            position: relative;
-            top: 5rem;
-            left: 15rem;
-        }
-        .read-more {
-            position: relative;
-            right: 9rem;
-        }
-        .blogParagraph {
-            line-height: 2rem;
-        }
-        .myDescription {
-            width: 52rem;
-            position: relative;
-            left: 6rem;
-        }
-        .plusClass {
-            position: relative;
-            top: 152rem;
-        }
-        .cardHeading {
-            width: 18.8rem;
-        }
-        .cardDetails {
-            position: relative;
-            left: 0.001rem;
-            width: 15rem;
-        }
-    }
-    /* Catergory Page Design template  */
-    
-    .catergoryColoumn {
-        background-color: inherit;
-        border-color: black;
-        border-width: 6px;
-        border-radius: 10%;
-        overflow: hidden;
-        width: 30rem;
-        height: 30rem;
-    }
-    
-    .particularBlogReadMore {
-        position: absolute;
-        background-color: inherit;
-        left: 40%;
-        top: 26.2rem;
-    }
-    
-    .readmorebutton {
-        font-size: 1.5rem;
-    }
-    
-    .cardParagraph {
-        font-weight: bolder;
-    }
-    
-    .contentClass {
-        margin-bottom: 2rem;
-    }
-    
-    @media screen and (max-width: 991px) {
-        .contentClass {
-            position: relative;
-            top: 10px;
-        }
-    }
