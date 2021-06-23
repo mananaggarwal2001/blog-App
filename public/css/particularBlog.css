@@ -147,3 +147,31 @@
         left: 20rem;
     }
 }
+
+
+/* Blog writing Section Starts */
+
+.catergoryheadingclass {
+    display: inline-block;
+    width: auto;
+    position: relative;
+    left: 42%;
+    font-size: 110%;
+    padding-top: 2%;
+    font-family: 'Volkhov', serif;
+    font-weight: bolder;
+    color: red;
+}
+
+.headingClassForParticularBlog {
+    display: inline-block;
+    width: auto;
+    position: relative;
+    left: 30%;
+    font-family: 'Volkhov', serif;
+    font-weight: bolder;
+}
+
+.blogParagraph {
+    font-size: 130%;
+}
