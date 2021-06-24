@@ -1,0 +1,56 @@
+body html {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://wallpaperaccess.com/full/32822.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    background-position-y: center;
+    height: 100%;
+}
+
+.coverPageHeading {
+    background-image: url("https://wallpaperaccess.com/full/32822.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+.headingClass {
+    color: white;
+}
+
+.headingSubClass {
+    font-family: 'Suez One', serif;
+}
+
+.headingParagraphElement {
+    font-weight: bolder;
+    padding-top: 1%;
+    font-family: 'Old Standard TT', serif;
+    font-size: 2.3vh;
+}
+
+.marginHeadingClass {
+    margin-top: 30vh;
+}
+
+
+/* Login Button Design */
+
+.loginButton {
+    position: relative;
+    left: 57%;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+.RegisterButton {
+    position: relative;
+    left: 20%;
+    font-size: 200%;
+    font-weight: bold;
+}
