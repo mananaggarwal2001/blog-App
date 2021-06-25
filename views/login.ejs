@@ -30,11 +30,11 @@
             </div>
             <button type="submit" class="btn btn-primary btn-lg btn-block loginButton">Login</button>
         </form>
-        <form>
+        <form action="/login" method="POST" enctype="application/x-www-form-urlencoded">
             <p class="signUpParagraphClass">Or Sign Up With</p>
-            <button class="googleButtonClass"><img class="googleImage" src="images/GoogleIcon.png" alt="googleIcon"></button>
-            <button class="twitterButtonClass"><img class="TwitterImage" src="/images/TwitterIcon.png" alt="TwitterIcon"></button>
-            <button class="facebookButtonClass"><img class="FacebookImage"  src="/images/FacebookIcon.png" alt="FacebookIcon"></button>
+            <button name="LoginButton" class="googleButtonClass" value="Google"><img class="googleImage" src="images/GoogleIcon.png" alt="googleIcon"></button>
+            <button name="LoginButton" class="twitterButtonClass" value="Twitter"><img class="TwitterImage" src="/images/TwitterIcon.png" alt="TwitterIcon"></button>
+            <button name="LoginButton" class="facebookButtonClass" value="Facebook"><img class="FacebookImage"  src="/images/FacebookIcon.png" alt="FacebookIcon">
 
             <div class="registrationClass">
                 <p>Or Register</p>

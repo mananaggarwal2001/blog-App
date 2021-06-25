@@ -59,7 +59,6 @@ app.use(passport.session());
 // for the mongodb connection to the local computer dataBase.
 
 
-
 let mongooseError = {
     useUnifiedTopology: true,
     useNewUrlParser: true
@@ -86,10 +85,14 @@ userSchema.plugin(findOrCreate); // findorcreate is not available in the mongoos
 userSchema.plugin(passportLocalMongoose); // for using the passport create Stragety.
 const userModel = mongoose.model("loginDetails", userSchema);
 passport.use(userModel.createStrategy());
+passport.serializeUser(userModel.serializeUser());
 
+// google OAuth Configuration
 passport.use(new googleStragety({
         clientID: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
+        followRedirects: true,
+        requestTokenURL: "https://accounts.google.com/OAuthGetRequestToken",
         callbackURL: "http://localhost:3000/google/BlogVerification",
         passReqToCallback: true
     },
@@ -99,3 +102,17 @@ passport.use(new googleStragety({
         });
     }
 ));
+
+
+// for authentication to the google.com
+
+passport.deserializeUser(userModel.deserializeUser());
+
+app.post("/login", (req, res) => {
+    const formButton = req.body.LoginButton;
+    if (formButton == "Google") {
+        passport.authenticate('google', {
+            scope: ['profile', 'email']
+        });
+    }
+});
