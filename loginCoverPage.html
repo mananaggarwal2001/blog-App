@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cookie&family=Just+Another+Hand&family=Pacifico&family=Playfair+Display+SC:ital,wght@0,900;1,900&family=Sacramento&family=Tangerine:wght@700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/640bd853df.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="public/css/loginCoverPage.css">
+    <link rel="stylesheet" href="css/loginCoverPage.css">
 </head>
 
 <body>
@@ -31,9 +31,9 @@
                 <h6 class="headingParagraphElement lead blockquote text-center">A Platform were You Can Express Your Blogging Skills.
                 </h6>
             </div>
-            <form method="GET">
-                <button type=" submit " class="loginButton btn btn-success btn-sm ">Register</button>
-                <button type="submit " class="RegisterButton btn btn-success ">Login</button>
+            <form method="POST" enctype="application/x-www-form-urlencoded">
+                <button name="formButton" type=" submit " class="loginButton btn btn-success btn-sm " value="Register ">Register</button>
+                <button name="formButton" type="submit " class="RegisterButton btn btn-success " value="Login">Login</button>
 
             </form>
 
