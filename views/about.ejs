@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>About</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <link rel="icon" href="./public/images/Afavicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cookie&family=Just+Another+Hand&family=Pacifico&family=Playfair+Display+SC:ital,wght@0,900;1,900&family=Sacramento&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/640bd853df.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/About.css">
+</head>
+
+<body>
+    <nav class="navbar   navbar-expand-lg navbar-light bg-dark">
+        <img class="StrengthImageClass" src="images/Strength.jpg " alt="Strength " srcset=" ">
+        <button class=" togglerClass navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarSupportedContent " aria-controls="navbarSupportedContent " aria-expanded="false " aria-label="Toggle navigation ">
+          <span  class=" mr-sm-1 navbar-toggler-icon "></span>
+        </button>
+
+        <div class=" collapse navbar-collapse " id="navbarSupportedContent ">
+
+            <ul class="topicClass navbar-nav mr-auto ">
+
+                <li class=" nav-item active">
+                    <a style="color:white" class="   nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class=" nav-item">
+                    <a style="color:white" class="  nav-link" href="/contactme">Contact Me</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color:white" class="  nav-link" href="/About">About</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color:white" class="  nav-link" href="/catergories">Catergories</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color:white" class="  nav-link" href="/createBlog">Create Blog</a>
+                </li>
+            </ul>
+            <form method="POST " class="form-inline my-2 my-lg-0 ">
+                <input class="form-control mr-sm-2 " type="search " placeholder="Search for blogs " aria-label="Search ">
+                <button class="btn btn-danger my-2 my-sm-0 " type="submit ">Search</button>
+            </form>
+
+            <button class="modalButton" type="button" data-toggle="modal" data-target="#exampleModal">
+                <img class="StrengthImageClass " src="<%= imagedisplay %>" alt="Strength" srcset=""></button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <img class="StrengthImageClass modalimageClass ml-auto mr-auto " src="<%= imagedisplay %>" alt="Strength" srcset=""></button>
+                        </div>
+                        <div class="mr-auto ml-auto modalDetailClass">
+                            <center>
+                                <h4 class="modal-title modal-dialog-centered">
+                                    <%= username %>
+                                </h4>
+                            </center>
+
+                            <p class="modalParagraph">
+                                <%= email %>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <form method="GET" action="/logout" class="form-inline my-2 my-lg-0">
+                                <button class=" logoutClass btn btn-danger ml-auto mr-auto" type="submit">Logout</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+
+    </nav>
+    <div class="headingClass ">
+
+
+        <div class="SubHeadingClass col col-lg-6 ">
+            <h1 class="mainHeadingClass ">We Love Writing</h1>
+        </div>
+    </div>
+    <div class="aboutClass container container-fluid ">
+        <img class="aboutImage " src="images/manan.jpg " alt="Manan.jpg ">
+        <p class="aboutParagraph ">I Manan Aggarwal Pursuing Btech Computer Science and Engineering From Jims Collage Presents you the Blog Website Created By Me.This Platform is for all who loves to Write the Blogs.This Platform Contains the Catergories according to Which the
+            Blog is Catergorised and Lot More Fun.
+        </p>
+    </div>
+    <div class="endingClass ">
+        <div class="endingClasstext ">
+            <h1 class="endingClassElement ">Stay in Touch</h1>
+            <hr class="endingClassRow ">
+        </div>
+
+    </div>
+</body>
+
+</html>

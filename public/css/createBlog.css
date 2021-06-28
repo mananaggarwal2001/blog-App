@@ -38,11 +38,6 @@
     font-size: 1.3rem;
 }
 
-.logoutClass {
-    margin-left: 10px;
-    margin-right: 5rem;
-}
-
 .StrengthImageClass {
     border-radius: 100%;
     width: 4rem;
@@ -186,4 +181,40 @@
     margin-bottom: 3%;
     font-size: 130%;
     margin-top: 5%;
+}
+
+
+/* Modal class  */
+
+.modalButton {
+    background-color: inherit;
+    border-style: none;
+}
+
+.modalimageClass {
+    width: 6rem;
+    height: 6rem;
+}
+
+.modalDetailClass {
+    width: auto;
+    position: relative;
+    bottom: 50%;
+    align-items: center;
+}
+
+.modal-title {
+    display: inline-block;
+    align-self: center;
+}
+
+.modalParagraph {
+    align-self: center;
+}
+
+.logoutClass {
+    position: relative;
+    right: 200%;
+    font-size: 120%;
+    font-weight: bolder;
 }

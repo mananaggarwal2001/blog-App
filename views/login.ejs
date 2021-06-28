@@ -30,17 +30,25 @@
             </div>
             <button type="submit" class="btn btn-primary btn-lg btn-block loginButton">Login</button>
         </form>
-        <form action="/login" method="POST" enctype="application/x-www-form-urlencoded">
-            <p class="signUpParagraphClass">Or Sign Up With</p>
-            <button name="LoginButton" class="googleButtonClass" value="Google"><img class="googleImage" src="images/GoogleIcon.png" alt="googleIcon"></button>
-            <button name="LoginButton" class="twitterButtonClass" value="Twitter"><img class="TwitterImage" src="/images/TwitterIcon.png" alt="TwitterIcon"></button>
-            <button name="LoginButton" class="facebookButtonClass" value="Facebook"><img class="FacebookImage"  src="/images/FacebookIcon.png" alt="FacebookIcon">
+        <p class="signUpParagraphClass">Or Sign Up With</p>
+        <form action="/auth/google" method="GET" enctype="application/x-www-form-urlencoded" class="formComponent googleButtonClass">
 
-            <div class="registrationClass">
-                <p>Or Register</p>
-                <a class="signUpClass" href="<%= Link %>">REGISTER</a>
-            </div>
+            <button name="LoginButton" class="ButtonClass" value="Google"><img class="googleImage" src="images/GoogleIcon.png" alt="googleIcon"></button>
         </form>
+        <form action="" class="formComponent twitterButtonClass">
+            <button name="LoginButton" class="ButtonClass" value="Twitter"><img class="TwitterImage" src="/images/TwitterIcon.png" alt="TwitterIcon"></button>
+
+        </form>
+        <form action="" class="formComponent facebookButtonClass">
+            <button name="LoginButton" class="ButtonClass Facebook" value="Facebook"><img class="FacebookImage"  src="/images/FacebookIcon.png" alt="FacebookIcon"></button>
+
+        </form>
+
+        <div class="registrationClass">
+            <p>Or Register</p>
+            <a class="signUpClass" href="<%= Link %>">REGISTER</a>
+        </div>
+
 
     </div>
 </body>

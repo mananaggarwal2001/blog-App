@@ -87,6 +87,7 @@ body {
     display: inline-block;
     position: relative;
     top: 22rem;
+    right: 0.2%;
     font-weight: bolder;
     font-size: 1.2rem;
 }
@@ -99,4 +100,24 @@ body {
 
 .LastNameClass {
     position: relative;
+}
+
+.formComponent {
+    display: inline-block;
+    border-width: 0;
+    color: inherit;
+}
+
+.ButtonClass {
+    border-style: none;
+    background-color: inherit;
+}
+
+
+/* Facebook Button Class  */
+
+.Facebook {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: inherit;
 }
