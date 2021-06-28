@@ -4,6 +4,8 @@ const passport = require('passport');
 const User = require('../models/model');
 let user = null;
 
+const key = require('../Keys/key');
+
 passport.serializeUser((user, done) => {
     done(null, user);
 }); // for creating the user cookie
@@ -19,8 +21,8 @@ passport.deserializeUser((user, done) => {
 
 
 passport.use(new googleStragety({
-    clientID: process.env.CLIENT_ID,
-    clientSecret: process.env.CLIENT_SECRET,
+    clientID: key.google.CLIENT_ID,
+    clientSecret: key.google.CLIENT_SECRET,
     callbackURL: "http://localhost:3000/google/blogVerification",
 }, (request, accessToken, refreshToken, profile, done) => {
     User.findOne({ googleid: profile.id }).then((currentUser) => {
