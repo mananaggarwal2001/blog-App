@@ -1,7 +1,7 @@
 const profileRoutes = require('express').Router();
 const passportStragety = require('../PassportStrageties/googleStragety');
 const passport = require('passport');
-const authRout = require('./auth-routes');
+const authRout = require('./auth-googleroutes');
 const authCheck = (req, res, next) => {
     if (req.user) {
         next();

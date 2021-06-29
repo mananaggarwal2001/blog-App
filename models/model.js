@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema({
     username: {
         type: String
     },
-    googleid: {
+    id: {
         type: String
     },
     imagePath: {

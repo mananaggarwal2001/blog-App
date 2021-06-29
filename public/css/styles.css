@@ -6,7 +6,7 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-        
+
         .SubHeadingClass {
             display: inline-block;
             position: relative;
@@ -15,21 +15,21 @@
             color: white;
             width: auto;
         }
-        
+
         .mainHeadingClass {
             font-size: 5rem;
             font-family: 'Source Serif Pro', serif;
         }
-        
+
         .topicClass {
             font-weight: bolder;
             margin-left: 1.5%;
         }
-        
+
         .togglerClass {
             background-color: white;
         }
-        
+
         .mainSubHeadingClass {
             position: relative;
             left: 2%;
@@ -37,18 +37,18 @@
             font-weight: bolder;
             font-size: 1.3rem;
         }
-        
+
         .logoutClass {
             margin-left: 10px;
             margin-right: 5rem;
         }
-        
+
         .StrengthImageClass {
             border-radius: 100%;
             width: 4rem;
             height: 4rem;
         }
-        
+
         .CatergoryElementClass {
             color: black;
             font-weight: bolder;
@@ -57,38 +57,38 @@
             margin-bottom: 2rem;
             margin-top: 2rem;
         }
-        
+
         .CatergoryElementClass:hover {
             background-color: #dddddd;
         }
-        
+
         .PostClass {
             background-color: #fff5eb;
             height: auto;
         }
-        
+
         .CardImage {
             height: 20rem;
         }
-        
+
         .cardClass {
             position: relative;
             left: 25%;
             width: 55%;
         }
-        
+
         .marginHorizontalRowClass {
             visibility: hidden;
             margin-top: 10rem;
         }
-        
+
         .horizontalRow {
             width: 14%;
             margin-bottom: 2.5rem;
             position: relative;
             right: 0.5%;
         }
-        
+
         .featurePostHeadingClass {
             display: inline-block;
             position: relative;
@@ -97,7 +97,7 @@
             font-family: 'Arvo', serif;
         }
         /* Bottom Class in the Css Content */
-        
+
         .endingClass {
             background-image: url("https://wallpaperaccess.com/full/3910193.jpg");
             height: 25rem;
@@ -109,7 +109,7 @@
             position: relative;
             bottom: 20%;
         }
-        
+
         .endingClasstext {
             position: relative;
             left: 43%;
@@ -117,21 +117,21 @@
             width: 18%;
             font-family: 'Source Serif Pro', serif;
         }
-        
+
         .endingClassElement {
             position: relative;
             width: 80%;
             left: 11%;
             font-size: 300%;
         }
-        
+
         .endingClassRow {
             margin-top: 12%;
             border: 4px solid white;
             border-radius: 25rem;
             margin-bottom: 10%;
         }
-        
+
         @media only screen and (max-width: 991px) {
             .headingClass {
                 background-image: url("https://wallpaperaccess.com/full/349872.jpg");
@@ -148,33 +148,36 @@
             }
         }
         /* Modal class  */
-        
+
         .modalButton {
             background-color: inherit;
             border-style: none;
+            margin-left: 1%;
         }
-        
+
         .modalimageClass {
             width: 6rem;
             height: 6rem;
         }
-        
+
         .modalDetailClass {
             width: auto;
             position: relative;
             bottom: 50%;
             align-items: center;
         }
-        
+
         .modal-title {
             display: inline-block;
             align-self: center;
+            font-weight: bolder;
         }
-        
+
         .modalParagraph {
             align-self: center;
+            font-weight: bold;
         }
-        
+
         .logoutClass {
             position: relative;
             right: 200%;

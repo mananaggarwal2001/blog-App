@@ -1,20 +1,20 @@
         body {
             background-image: radial-gradient(rgb(126, 235, 126), rgb(255, 255, 187));
         }
-        
+
         .strengthImage {
             border-radius: 100%;
             width: 7rem;
             height: 7rem;
         }
         /* heading */
-        
+
         .blogHeadingClass {
             display: inline-block;
             width: 28rem;
             margin-left: 2rem;
         }
-        
+
         .knowStrengthHeading {
             font-family: 'Pacifico', cursive;
             position: relative;
@@ -29,7 +29,7 @@
             height: 3.7rem;
         }
         /* For Form class */
-        
+
         .formElements {
             margin: 3rem;
             display: inline-block;
@@ -37,7 +37,7 @@
             margin-left: 15rem;
             box-shadow: 5px 10px 18px black;
         }
-        
+
         .form-group {
             display: inline-block;
             width: 50rem;
@@ -49,12 +49,12 @@
             border-radius: 4%;
             height: 72.5rem;
         }
-        
+
         .blogForm {
             box-shadow: 5px, 10px 18px black;
         }
         /*Form Elements*/
-        
+
         .nameFormPart,
         .preferenceLabel,
         .writingBlogLabel,
@@ -66,22 +66,22 @@
             font-size: 2rem;
             margin-bottom: 1rem;
         }
-        
+
         .preferenceLabel {
             margin-top: 2rem;
         }
-        
+
         .writingBlogLabel {
             position: relative;
             top: 4rem;
         }
-        
+
         .topicLabel {
             position: relative;
             top: 2rem;
             margin-bottom: 3rem;
         }
-        
+
         .textAreaClass {
             resize: none;
             position: relative;
@@ -91,7 +91,7 @@
             border-style: solid 15px;
             height: 25rem;
         }
-        
+
         .submitButtonClass {
             position: relative;
             top: 14rem;
@@ -102,38 +102,41 @@
             font-size: 2rem;
             font-style: italic;
         }
-        
+
         #file {
             display: none;
         }
         /* Modal class  */
-        
+
         .modalButton {
             background-color: inherit;
             border-style: none;
+            margin-left: 1%;
         }
-        
+
         .modalimageClass {
             width: 6rem;
             height: 6rem;
         }
-        
+
         .modalDetailClass {
             width: auto;
             position: relative;
             bottom: 50%;
             align-items: center;
         }
-        
+
         .modal-title {
             display: inline-block;
             align-self: center;
+            font-weight: bolder;
         }
-        
+
         .modalParagraph {
             align-self: center;
+            font-weight: bold;
         }
-        
+
         .logoutClass {
             position: relative;
             right: 200%;

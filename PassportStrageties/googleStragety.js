@@ -2,8 +2,6 @@ require('dotenv').config();
 let googleStragety = require("passport-google-oauth").OAuth2Strategy;
 const passport = require('passport');
 const User = require('../models/model');
-let user = null;
-
 const key = require('../Keys/key');
 
 passport.serializeUser((user, done) => {
@@ -12,7 +10,7 @@ passport.serializeUser((user, done) => {
 
 
 passport.deserializeUser((user, done) => {
-    User.find({ googleid: user.googleid }).then((user) => {
+    User.find({ id: user.id }).then((user) => {
         done(null, user);
     });
 });
@@ -25,13 +23,13 @@ passport.use(new googleStragety({
     clientSecret: key.google.CLIENT_SECRET,
     callbackURL: "http://localhost:3000/google/blogVerification",
 }, (request, accessToken, refreshToken, profile, done) => {
-    User.findOne({ googleid: profile.id }).then((currentUser) => {
+    User.findOne({ id: profile.id }).then((currentUser) => {
         if (currentUser) {
             done(null, currentUser);
         } else {
             new User({
                 username: profile.displayName,
-                googleid: profile.id,
+                id: profile.id,
                 imagePath: profile.photos[0].value,
                 email: profile.emails[0].value,
             }).save().then((user) => {

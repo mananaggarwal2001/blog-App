@@ -189,6 +189,7 @@
 .modalButton {
     background-color: inherit;
     border-style: none;
+    margin-left: 1%;
 }
 
 .modalimageClass {
@@ -206,10 +207,12 @@
 .modal-title {
     display: inline-block;
     align-self: center;
+    font-weight: bolder;
 }
 
 .modalParagraph {
     align-self: center;
+    font-weight: bold;
 }
 
 .logoutClass {

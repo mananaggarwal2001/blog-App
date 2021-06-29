@@ -5,9 +5,11 @@ const bodyparser = require('body-parser');
 const app = express();
 let session = require('express-session');
 const passport = require('passport');
-const routes = require('./Routes/auth-routes');
+const routes = require('./Routes/auth-googleroutes');
 const profileRoutes = require('./Routes/profile-Routes');
 const CookieSession = require('cookie-session');
+const twitterAuthRoutes = require('./Routes/auth-twitterRoutes');
+const githubRoutes = require('./Routes/auth-githubRoutes');
 
 
 app.use(bodyparser.urlencoded({ extended: true })); // for accessing the part of the html code.
@@ -35,6 +37,8 @@ app.use(passport.session());
 // for using the routes folder in the app.
 app.use(routes);
 app.use(profileRoutes);
+app.use(twitterAuthRoutes);
+app.use(githubRoutes);
 
 app.listen(3000, () => {
     console.log("app is listening to the port 3000");
