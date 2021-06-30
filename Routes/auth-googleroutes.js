@@ -23,11 +23,6 @@ routes.get('/logout', (req, res) => {
 routes.get("/login", (req, res) => {
     res.render("login", { Link: "register" });
 });
-
-routes.get("/register", (req, res) => {
-    res.render("register");
-});
-
 routes.get('/auth/google',
     passport.authenticate('google', {
         scope: ['profile', 'email']

@@ -25,10 +25,6 @@ Twitterroutes.get("/login", (req, res) => {
     res.render("login", { Link: "register" });
 });
 
-Twitterroutes.get("/register", (req, res) => {
-    res.render("register");
-});
-
 Twitterroutes.get('/auth/twitter',
     passport.authenticate('twitter', {
         scope: ['profile', 'email']

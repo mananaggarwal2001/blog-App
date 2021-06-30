@@ -5,6 +5,12 @@ githubRoutes.get('/', (req, res) => {
     res.render('loginCoverPage');
 });
 
+githubRoutes.get('/register', (req, res) => {
+    res.render('register', {
+        Email: []
+    });
+});
+
 githubRoutes.get('/home', (req, res) => {
     let userDetails = req.user;
     res.render('index', {
@@ -23,10 +29,6 @@ githubRoutes.get('/logout', (req, res) => {
 
 githubRoutes.get("/login", (req, res) => {
     res.render("login", { Link: "register" });
-});
-
-githubRoutes.get("/register", (req, res) => {
-    res.render("register");
 });
 
 githubRoutes.get('/auth/github',

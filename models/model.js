@@ -1,4 +1,8 @@
 const mongoose = require('mongoose');
+const feildEncrypt = require('mongoose-field-encryption').fieldEncryption;
+const key = require('../Keys/key');
+
+
 let mongooseError = {
     useUnifiedTopology: true,
     useNewUrlParser: true
@@ -11,7 +15,7 @@ mongoose.connect("mongodb://localhost:27017/BlogInformation", mongooseError, (er
     }
 });
 
-const userSchema = new mongoose.Schema({
+const authenticationSchema = new mongoose.Schema({
     username: {
         type: String
     },
@@ -25,7 +29,31 @@ const userSchema = new mongoose.Schema({
         type: String
     }
 });
+const userDetailsSchema = new mongoose.Schema({
+    firstName: {
+        type: String
+    },
+    lastName: {
+        type: String
+    },
+    username: {
+        type: String,
+    },
+    email: {
+        type: String,
+    },
+    password: {
+        type: String
+    }
+});
 
-const User = mongoose.model("loginDetails", userSchema);
+userDetailsSchema.plugin(feildEncrypt, { fields: ['password'], secret: key.localKey });
+const User = mongoose.model("loginDetails", authenticationSchema);
+const localDetails = mongoose.model("localDetails", userDetailsSchema);
 
-module.exports = User;
+
+module.exports = {
+    AuthRoute: User,
+    LocalRoute: localDetails
+
+};

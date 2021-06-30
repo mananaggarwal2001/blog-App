@@ -1,6 +1,6 @@
 const twitterStragety = require('passport-twitter').Strategy;
 const passport = require('passport');
-const User = require('../models/model');
+const User = require('../models/model').AuthRoute;
 const key = require('../Keys/key');
 
 passport.serializeUser((user, done) => {
