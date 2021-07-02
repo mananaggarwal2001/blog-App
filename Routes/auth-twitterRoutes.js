@@ -2,11 +2,6 @@ const Twitterroutes = require('express').Router();
 const passport = require('passport');
 const passportSetup = require('../PassportStrageties/twitterStragety');
 
-Twitterroutes.get('/', (req, res) => {
-    res.render('loginCoverPage');
-});
-
-
 Twitterroutes.get('/home', (req, res) => {
     let userDetails = req.user;
 

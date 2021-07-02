@@ -2,9 +2,6 @@ const routes = require('express').Router();
 const passport = require('passport');
 const passportSetup = require('../PassportStrageties/googleStragety');
 
-routes.get('/', (req, res) => {
-    res.render('loginCoverPage');
-});
 
 routes.get('/home', (req, res) => {
     let userDetails = req.user;
