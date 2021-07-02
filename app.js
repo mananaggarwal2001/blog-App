@@ -47,7 +47,7 @@ app.use(twitterAuthRoutes);
 app.use(githubRoutes);
 app.use(register);
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log("app is listening to the port 3000");
 });
