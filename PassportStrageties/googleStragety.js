@@ -19,7 +19,7 @@
 
 
  passport.use(new googleStragety({
-     clientID: process.env.G_ClientID,
+     clientID: process.env.G_clientID,
      clientSecret: process.env.GClient_Secret,
      callbackURL: "http://localhost:3000/google/blogVerification",
  }, (request, accessToken, refreshToken, profile, done) => {
