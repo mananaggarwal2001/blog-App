@@ -1,5 +1,5 @@
 require('dotenv').config();
-let googleStragety = require("passport-google-oauth").OAuth2Strategy;
+const googleStragety = require("passport-google-oauth").OAuth2Strategy;
 const passport = require('passport');
 const User = require('../models/model').AuthRoute;
 
@@ -19,7 +19,7 @@ passport.deserializeUser((user, done) => {
 
 
 passport.use(new googleStragety({
-    clientID: process.env.GClient_ID,
+    clientID: process.env.G_ClientID,
     clientSecret: process.env.GClient_Secret,
     callbackURL: "http://localhost:3000/google/blogVerification",
 }, (request, accessToken, refreshToken, profile, done) => {
