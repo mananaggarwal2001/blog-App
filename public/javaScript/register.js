@@ -5,29 +5,28 @@ $('#registerId').click(() => {
     let email = $('#email').val();
     let password = $('#password').val();
     let C_password = $('#C_password').val();
+    let lengthPassword = password.length;
+
     if (firstName == "" || lastName == "" || username == "" || email == "" || password == "" || C_password == "") {
         Swal.fire('Missing Details', 'Enter the missing Details', 'warning');
+    } else if (lengthPassword < 6) {
+        Swal.fire('Oops!!!!!', 'Password Should be min 6 Characters Long', 'warning');
     } else if (password !== C_password) {
         Swal.fire('Mismatch', 'Password Did not match', 'error');
     } else {
         Swal.fire({
             title: 'Are you sure?',
-            text: 'You will not be able to recover this imaginary file!',
+            text: 'You will be Redirected to the Login Page',
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonText: 'Yes, delete it!',
-            cancelButtonText: 'No, keep it'
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No'
         }).then((result) => {
             if (result.isConfirmed) {
-                $('form').submit((element) => {
-                    console.log(element);
-                })
+                $('form').submit();
+
             } else if (result.dismiss === Swal.DismissReason.cancel) {
-                Swal.fire(
-                    'Cancelled',
-                    'Your imaginary file is safe :)',
-                    'error'
-                )
+                return false;
             }
         });
     }

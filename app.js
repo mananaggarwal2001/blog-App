@@ -11,6 +11,8 @@ const CookieSession = require('cookie-session');
 const twitterAuthRoutes = require('./Routes/auth-twitterRoutes');
 const githubRoutes = require('./Routes/auth-githubRoutes');
 const register = require('./Routes/auth-localRoute');
+const User = require('./models/model').AuthRoute;
+const cookieSession = require('cookie-session');
 
 
 app.use(bodyparser.urlencoded({ extended: true })); // for accessing the part of the html code.
@@ -25,15 +27,18 @@ app.post("/", (req, res) => {
     }
     console.log(ButtonName);
 });
-
 // google oAuth2.0 Security Implementation
-app.use(CookieSession({
-    maxAge: 60 * 1000 * 60 * 24,
-    keys: ['mananisagoodboy']
+app.use(cookieSession({
+    secret: process.env.localKey,
+    maxAge: 1000 * 60 * 60 * 24,
+
 }));
+
+
 // for initilization of the cookie session which was saved in the browser.
 app.use(passport.initialize());
 app.use(passport.session());
+
 
 // for using the routes folder in the app.
 app.use(routes);
@@ -42,6 +47,7 @@ app.use(twitterAuthRoutes);
 app.use(githubRoutes);
 app.use(register);
 
+const port = (process.env.PORT || 3000)
 app.listen(3000, () => {
-    console.log("app is listening to the port 3000");
+    console.log(port, "app is listening to the port 3000");
 });

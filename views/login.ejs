@@ -17,40 +17,47 @@
 </head>
 
 <body>
-    <div class=" formClass container container-sm">
-        <h1 class="loginHeading">Login</h1>
-        <form>
-            <div class=" usernameClass form-group">
-                <label for="exampleInputEmail1" class="usernameLabel">Username</label>
-                <input type="email" class="form-control emailClass" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type Your Username" required>
-            </div>
-            <div class=" passwordClass form-group">
-                <label for="exampleInputPassword1" class="passwordLabel">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Type Your Password" required>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg btn-block loginButton">Login</button>
-        </form>
-        <p class="signUpParagraphClass">Or Sign Up With</p>
-        <form action="/auth/google" method="GET" enctype="application/x-www-form-urlencoded" class="formComponent googleButtonClass">
 
-            <button name="LoginButton" class="ButtonClass" value="Google"><img class="googleImage" src="images/GoogleIcon.png" alt="googleIcon"></button>
-        </form>
-        <form action="/auth/twitter" class="formComponent twitterButtonClass">
-            <button name="LoginButton" class="ButtonClass" value="Twitter"><img class="TwitterImage" src="/images/TwitterIcon.png" alt="TwitterIcon"></button>
-
-        </form>
-        <form action="/auth/github" class="formComponent facebookButtonClass">
-            <button name="LoginButton" class="ButtonClass Facebook" value="Instagram"><img class="FacebookImage"  src="/images/github.png" alt="FacebookIcon"></button>
-
-        </form>
-
-        <div class="registrationClass">
-            <p>Or Register</p>
-            <a class="signUpClass" href="<%= Link %>">REGISTER</a>
+    <%if(flag == false){%>
+        <div class="alert alert-danger" id="negativeAlert" role="alert">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <%= text %>
         </div>
+        <%}%>
+            <div class=" formClass container container-sm">
+                <h1 class="loginHeading">Login</h1>
+                <form action="/login" method="POST" enctype="application/x-www-form-urlencoded">
+                    <div class=" usernameClass form-group">
+                        <label for="exampleInputEmail1" class="usernameLabel">Username</label>
+                        <input name="username" type="email" class="form-control emailClass" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type Your Username" required>
+                    </div>
+                    <div class=" passwordClass form-group">
+                        <label for="exampleInputPassword1" class="passwordLabel">Password</label>
+                        <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Type Your Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block loginButton">Login</button>
+                </form>
+                <p class="signUpParagraphClass">Or Sign Up With</p>
+                <form action="/auth/google" method="GET" enctype="application/x-www-form-urlencoded" class="formComponent googleButtonClass">
+
+                    <button name="LoginButton" class="ButtonClass" value="Google"><img class="googleImage" src="images/GoogleIcon.png" alt="googleIcon"></button>
+                </form>
+                <form action="/auth/twitter" class="formComponent twitterButtonClass">
+                    <button name="LoginButton" class="ButtonClass" value="Twitter"><img class="TwitterImage" src="/images/TwitterIcon.png" alt="TwitterIcon"></button>
+
+                </form>
+                <form action="/auth/github" class="formComponent facebookButtonClass">
+                    <button name="LoginButton" class="ButtonClass Facebook" value="Instagram"><img class="FacebookImage"  src="/images/github.png" alt="FacebookIcon"></button>
+
+                </form>
+
+                <div class="registrationClass">
+                    <p>Or Register</p>
+                    <a class="signUpClass" href="<%= Link %>">REGISTER</a>
+                </div>
 
 
-    </div>
+            </div>
 </body>
 
 </html>

@@ -1,7 +1,8 @@
+require('dotenv').config();
 const githubStragety = require('passport-github2').Strategy;
 const passport = require('passport');
 const User = require('../models/model').AuthRoute;
-const key = require('../Keys/key');
+
 passport.serializeUser((user, done) => {
     done(null, user);
 }); // for creating the user cookie
@@ -9,14 +10,15 @@ passport.serializeUser((user, done) => {
 
 passport.deserializeUser((user, done) => {
     User.find({ id: user.id }).then((user) => {
+        console.log(user);
         done(null, user);
     });
 });
 
 
 passport.use(new githubStragety({
-        clientID: key.github.ClientId,
-        clientSecret: key.github.ClientSecret,
+        clientID: process.env.ClientSecret,
+        clientSecret: process.env.clientId,
         callbackURL: "http://localhost:3000/auth/github/callback"
     },
     function(accessToken, refreshToken, profile, done) {

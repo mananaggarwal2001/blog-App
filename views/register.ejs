@@ -19,41 +19,50 @@
 
 <body>
 
-    <div class="formClass container container-md">
-        <h1 class="loginHeading">Registration</h1>
-        <form method="POST" enctype="application/x-www-form-urlencoded" action="/register">
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label class=" formLabelClass" for=" inputEmail4 ">First Name</label>
-                    <input name="firstName" type="text" class="form-control " id="FirstName " placeholder="First Name">
-                </div>
-                <div class="form-group col-md-6 ">
-                    <label class="formLabelClass " for="inputPassword4 ">Last Name</label>
-                    <input name="lastName" type="text " class=" lastNameClass form-control " id="LastName " placeholder="Last Name ">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="formLabelClass " for=" inputAddress ">Username</label>
-                <input name="Username" type="text" class="form-control " id="Username " placeholder="Username ">
-            </div>
-            <div class="form-group">
-                <label class="formLabelClass " for=" inputAddress ">Email</label>
-                <input name="email" type="email" class="form-control " id="email" placeholder="Email ">
-            </div>
-            <div class="form-group ">
-                <label class="formLabelClass " for="inputAddress2 ">Password</label>
-                <input name="password" type="password" class="form-control " id="password" placeholder="Password ">
-            </div>
-            <div class="form-group ">
-                <label class="formLabelClass " for="inputAddress2 ">Confirm Password</label>
-                <input name="C_password" type="password" class="form-control " id="C_password" placeholder="Confirm Password ">
-            </div>
-            <button class="registerButton" id="registerId" type="button" class="btn btn-primary">Register</button>
-        </form>
+    <%if(flag == false){%>
+        <div class="alert alert-danger" id="negativeAlert" role="alert">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <%= text %>
+        </div>
+        <%}%>
 
-    </div>
-    <script src="sweetalert2/dist/sweetalert2.all.min.js "></script>
-    <script src="javaScript/register.js"></script>
+            <div class="formClass container container-md">
+                <h1 class="loginHeading">Registration</h1>
+
+                <form method="POST" enctype="application/x-www-form-urlencoded" action="/register">
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label class=" formLabelClass" for=" inputEmail4 ">First Name</label>
+                            <input name="firstName" type="text" class="form-control " id="FirstName " placeholder="First Name">
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label class="formLabelClass " for="inputPassword4 ">Last Name</label>
+                            <input name="lastName" type="text " class=" lastNameClass form-control " id="LastName " placeholder="Last Name ">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="formLabelClass " for=" inputAddress ">Username</label>
+                        <input name="Username" type="text" class="form-control " id="Username " placeholder="Username ">
+                    </div>
+                    <div class="form-group">
+                        <label class="formLabelClass " for=" inputAddress ">Email</label>
+                        <input type="email" class="form-control" name="email" [(ngModel)]="myemail" #myemail="ngModel" placeholder="Email" />
+                    </div>
+                    <div class="form-group ">
+                        <label class="formLabelClass " for="inputAddress2 ">Password</label>
+                        <input name="password" type="password" class="form-control " id="password" placeholder="Password ">
+                    </div>
+                    <div class="form-group ">
+                        <label class="formLabelClass " for="inputAddress2 ">Confirm Password</label>
+                        <input name="C_password" type="password" class="form-control " id="C_password" placeholder="Confirm Password ">
+                    </div>
+                    <button class="registerButton" id="registerId" type="button" class="btn btn-primary">Register</button>
+                </form>
+
+            </div>
+            <script src="sweetalert2/dist/sweetalert2.all.min.js "></script>
+            <script src="javaScript/register.js"></script>
 </body>
 
 </html>

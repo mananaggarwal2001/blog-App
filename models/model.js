@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 const feildEncrypt = require('mongoose-field-encryption').fieldEncryption;
-const key = require('../Keys/key');
-
 
 let mongooseError = {
     useUnifiedTopology: true,
@@ -47,7 +45,7 @@ const userDetailsSchema = new mongoose.Schema({
     }
 });
 
-userDetailsSchema.plugin(feildEncrypt, { fields: ['password'], secret: key.localKey });
+
 const User = mongoose.model("loginDetails", authenticationSchema);
 const localDetails = mongoose.model("localDetails", userDetailsSchema);
 

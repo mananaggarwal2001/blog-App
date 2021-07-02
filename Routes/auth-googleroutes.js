@@ -8,6 +8,7 @@ routes.get('/', (req, res) => {
 
 routes.get('/home', (req, res) => {
     let userDetails = req.user;
+    console.log(req.user);
     res.render('index', {
         username: userDetails[0].username,
         email: userDetails[0].email,
@@ -21,7 +22,11 @@ routes.get('/logout', (req, res) => {
     res.redirect('/');
 });
 routes.get("/login", (req, res) => {
-    res.render("login", { Link: "register" });
+    res.render("login", {
+        Link: "register",
+        flag: null,
+        text: ""
+    });
 });
 routes.get('/auth/google',
     passport.authenticate('google', {

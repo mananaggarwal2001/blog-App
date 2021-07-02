@@ -4,9 +4,10 @@ const passport = require('passport');
 const authRout = require('./auth-googleroutes');
 const authCheck = (req, res, next) => {
     if (req.user) {
+        console.log(req.user);
         next();
     } else {
-        res.redirect('/');
+        res.redirect('/login');
     }
 }
 profileRoutes.get("/home", authCheck, (req, res) => {

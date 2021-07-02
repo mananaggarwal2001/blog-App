@@ -2,9 +2,9 @@ require('dotenv').config();
 let googleStragety = require("passport-google-oauth").OAuth2Strategy;
 const passport = require('passport');
 const User = require('../models/model').AuthRoute;
-const key = require('../Keys/key');
 
 passport.serializeUser((user, done) => {
+    console.log(user);
     done(null, user);
 }); // for creating the user cookie
 
@@ -19,8 +19,8 @@ passport.deserializeUser((user, done) => {
 
 
 passport.use(new googleStragety({
-    clientID: key.google.CLIENT_ID,
-    clientSecret: key.google.CLIENT_SECRET,
+    clientID: process.env.GClient_ID,
+    clientSecret: process.env.GClient_Secret,
     callbackURL: "http://localhost:3000/google/blogVerification",
 }, (request, accessToken, refreshToken, profile, done) => {
     User.findOne({ id: profile.id }).then((currentUser) => {

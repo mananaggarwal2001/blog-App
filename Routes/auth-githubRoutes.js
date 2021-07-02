@@ -7,7 +7,8 @@ githubRoutes.get('/', (req, res) => {
 
 githubRoutes.get('/register', (req, res) => {
     res.render('register', {
-        Email: []
+        text: '',
+        flag: null,
     });
 });
 
@@ -28,7 +29,11 @@ githubRoutes.get('/logout', (req, res) => {
 
 
 githubRoutes.get("/login", (req, res) => {
-    res.render("login", { Link: "register" });
+    res.render("login", {
+        Link: "register",
+        flag: null,
+        text: ""
+    });
 });
 
 githubRoutes.get('/auth/github',

@@ -9,6 +9,7 @@ Twitterroutes.get('/', (req, res) => {
 
 Twitterroutes.get('/home', (req, res) => {
     let userDetails = req.user;
+
     res.render('index', {
         username: userDetails[0].username,
         email: userDetails[0].email,
@@ -22,7 +23,11 @@ Twitterroutes.get('/logout', (req, res) => {
     res.redirect('/');
 });
 Twitterroutes.get("/login", (req, res) => {
-    res.render("login", { Link: "register" });
+    res.render("login", {
+        Link: "register",
+        flag: null,
+        text: ""
+    });
 });
 
 Twitterroutes.get('/auth/twitter',
