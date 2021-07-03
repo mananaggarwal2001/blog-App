@@ -1,4 +1,3 @@
-require('dotenv').config();
 const githubStragety = require('passport-github2').Strategy;
 const passport = require('passport');
 const User = require('../models/model').AuthRoute;

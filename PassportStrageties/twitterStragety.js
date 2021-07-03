@@ -1,4 +1,3 @@
-require('dotenv').config();
 const twitterStragety = require('passport-twitter').Strategy;
 const passport = require('passport');
 const User = require('../models/model').AuthRoute;

@@ -1,4 +1,3 @@
- require('dotenv').config();
  const googleStragety = require("passport-google-oauth").OAuth2Strategy;
  const passport = require('passport');
  const User = require('../models/model').AuthRoute;
