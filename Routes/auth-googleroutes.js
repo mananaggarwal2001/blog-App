@@ -27,7 +27,7 @@ routes.get("/login", (req, res) => {
 });
 routes.get('/auth/google',
     passport.authenticate('google', {
-        scope: ['profile', 'email']
+        scope: ['https://www.google.com/m8/feeds']
     })
 );
 
