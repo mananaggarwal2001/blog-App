@@ -3,6 +3,7 @@ const passport = require('passport');
 const User = require('../models/model').AuthRoute;
 const LocalModel = require('../models/model').LocalRoute;
 const md5 = require('md5');
+require('dotenv').config();
 passport.serializeUser((user, done) => {
     done(null, user);
 }); // for creating the user cookie

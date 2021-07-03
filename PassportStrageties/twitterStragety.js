@@ -1,6 +1,7 @@
 const twitterStragety = require('passport-twitter').Strategy;
 const passport = require('passport');
 const User = require('../models/model').AuthRoute;
+require('dotenv').config();
 
 passport.serializeUser((user, done) => {
     console.log(user);

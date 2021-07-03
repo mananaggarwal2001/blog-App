@@ -1,7 +1,7 @@
  const googleStragety = require("passport-google-oauth").OAuth2Strategy;
  const passport = require('passport');
  const User = require('../models/model').AuthRoute;
-
+ require('dotenv').config();
  passport.serializeUser((user, done) => {
      console.log(user);
      done(null, user);

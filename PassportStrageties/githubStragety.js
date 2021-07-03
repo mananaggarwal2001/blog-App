@@ -1,6 +1,7 @@
 const githubStragety = require('passport-github2').Strategy;
 const passport = require('passport');
 const User = require('../models/model').AuthRoute;
+require('dotenv').config();
 
 passport.serializeUser((user, done) => {
     done(null, user);
