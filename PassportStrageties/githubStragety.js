@@ -19,7 +19,7 @@ passport.deserializeUser((user, done) => {
 passport.use(new githubStragety({
         clientID: process.env.ClientSecret,
         clientSecret: process.env.clientId,
-        callbackURL: "http://localhost:3000/auth/github/callback"
+        callbackURL: "https://blogapp-manan.herokuapp.com/auth/github/callback"
     },
     function(accessToken, refreshToken, profile, done) {
         User.findOne({ id: profile.id }).then((currentUser) => {
