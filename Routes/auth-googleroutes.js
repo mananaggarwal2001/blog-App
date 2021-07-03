@@ -25,13 +25,13 @@ routes.get("/login", (req, res) => {
         text: ""
     });
 });
-routes.get('/auth/google',
-    passport.authenticate('google', {
-        scope: ['https://www.google.com/m8/feeds']
+routes.get('/auth/Instagram',
+    passport.authenticate('instagram', {
+        scope: ['profile']
     })
 );
 
-routes.get('/google/Blogverification', passport.authenticate('google'), (req, res) => {
+routes.get('/instagram/Blogverification', passport.authenticate('instagram'), (req, res) => {
     res.redirect('/home');
 });
 

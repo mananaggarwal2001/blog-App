@@ -1,3 +1,4 @@
+ const instagramStrategy = require('passport-instagram').Strategy;
  const googleStragety = require('passport-google-oauth').OAuth2Strategy;
  const passport = require('passport');
  const User = require('../models/model').AuthRoute;
@@ -17,11 +18,10 @@
  // for destroying the cookie  and retreaving the information
 
 
- passport.use(new googleStragety({
-     clientID: process.env.G_clientID,
-     clientSecret: process.env.GClient_Secret,
-     accessTokenURL: "https://oauth2.googleapis.com/token",
-     callbackURL: "http://localhost:3000/google/blogVerification",
+ passport.use(new instagramStrategy({
+     clientID: process.env.I_AppId,
+     clientSecret: process.env.I_AppSecret,
+     callbackURL: "https://git.heroku.com/blogapp-manan.git/instagram/blogVerification",
  }, (request, accessToken, refreshToken, profile, done) => {
      User.findOne({ id: profile.id }).then((currentUser) => {
          if (currentUser) {
