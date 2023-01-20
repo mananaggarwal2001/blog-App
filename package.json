@@ -28,6 +28,7 @@
     "http": "*",
     "lodash": "^4.17.21",
     "md5": "^2.3.0",
+    "mime": "^3.0.0",
     "mongoose": "^5.13.2",
     "mongoose-encryption": "^2.1.0",
     "mongoose-field-encryption": "^4.0.2",

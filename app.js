@@ -1,18 +1,13 @@
 require('dotenv').config();
 const express = require('express');
-const request = require('request');
 const bodyparser = require('body-parser');
 const app = express();
-let session = require('express-session');
 const passport = require('passport');
 const routes = require('./Routes/auth-googleroutes');
 const profileRoutes = require('./Routes/profile-Routes');
-const CookieSession = require('cookie-session');
 const twitterAuthRoutes = require('./Routes/auth-twitterRoutes');
 const githubRoutes = require('./Routes/auth-githubRoutes');
 const register = require('./Routes/auth-localRoute');
-const User = require('./models/model').AuthRoute;
-const cookieSession = require('cookie-session');
 
 
 app.use(bodyparser.urlencoded({ extended: true })); // for accessing the part of the html code.
